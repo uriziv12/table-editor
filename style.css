@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+#fileNameDisplay {
+    font-size: 0.9em;
+    color: #666;
+}
+
+table {
+    border-collapse: collapse;
+    background: white;
+    margin: 2px;
+}
+
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    vertical-align: top;
+    min-width: 50px;
+}
+
+/* עיצוב לתא עריכה */
+[contenteditable="true"] {
+    outline: none;
+    padding: 2px 5px;
+}
+
+[contenteditable="true"]:focus {
+    background-color: #fff9c4;
+    border-radius: 2px;
+}
+
+.label-cell {
+    background-color: #f9f9f9;
+    font-weight: bold;
+    color: #333;
+}
+
+/* מיכל התא שמאפשר מיקום אבסולוטי לכפתור */
+.label-cell {
+    position: relative;
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+.add-row-btn {
+    display: none; /* חבוי כברירת מחדל */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.label-cell:hover .add-row-btn {
+    display: block; /* מופיע ב-Hover */
+}
+
+.add-row-btn:hover {
+    background: #218838;
+    transform: translateX(-50%) scale(1.2);
+}
